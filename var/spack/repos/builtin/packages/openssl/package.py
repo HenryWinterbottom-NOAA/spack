@@ -28,7 +28,8 @@ class Openssl(Package):  # Uses Fake Autotools, should subclass Package
 
     executables = ["openssl"]
 
-    version("3.1.1", sha256="b3aa61334233b852b63ddb048df181177c2c659eb9d4376008118f9c08d07674")
+    version(
+        "3.1.1", sha256="b3aa61334233b852b63ddb048df181177c2c659eb9d4376008118f9c08d07674")
     version(
         "3.1.0",
         sha256="aaa925ad9828745c4cad9d9efeb273deca820f2cdcf2c3ac7d7c1212b7c497b4",
@@ -427,7 +428,7 @@ class Openssl(Package):  # Uses Fake Autotools, should subclass Package
 
         # Make a flag for shared library builds
         base_args = [
-            "--prefix=%s" % prefix,
+            "--prefix=%s" % prefix, "--disable_openssl",
             "--openssldir=%s" % join_path(prefix, "etc", "openssl"),
         ]
         if spec.satisfies("platform=windows"):
