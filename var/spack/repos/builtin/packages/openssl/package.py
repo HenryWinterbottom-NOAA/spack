@@ -28,15 +28,13 @@ class Openssl(Package):  # Uses Fake Autotools, should subclass Package
 
     executables = ["openssl"]
 
-    version(
-        "3.1.1", sha256="b3aa61334233b852b63ddb048df181177c2c659eb9d4376008118f9c08d07674")
+    version("3.1.1", sha256="b3aa61334233b852b63ddb048df181177c2c659eb9d4376008118f9c08d07674")
     version(
         "3.1.0",
         sha256="aaa925ad9828745c4cad9d9efeb273deca820f2cdcf2c3ac7d7c1212b7c497b4",
         deprecated=True,
     )
-    version(
-        "3.0.9", sha256="eb1ab04781474360f77c318ab89d8c5a03abc38e63d65a603cabbf1b00a1dc90")
+    version("3.0.9", sha256="eb1ab04781474360f77c318ab89d8c5a03abc38e63d65a603cabbf1b00a1dc90")
     version(
         "3.0.8",
         sha256="6c13d2bf38fdf31eac3ce2a347073673f5d63263398f1f69d0df4a41253e4b3e",
